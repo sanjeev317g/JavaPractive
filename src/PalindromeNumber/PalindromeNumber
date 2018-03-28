@@ -1,0 +1,28 @@
+import java.lang.*;
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        
+        int reversesum = 0;
+
+		final int m = x;
+		
+		while(x!=0) {
+			
+			reversesum = reversesum*10;
+			
+			reversesum = reversesum + (Math.abs(x)%10);
+			
+			x = Math.abs(x)/10;
+		}
+
+		if(m == reversesum) {
+
+            return true;
+		}
+		else {
+
+            return false;
+		}
+    }
+}
